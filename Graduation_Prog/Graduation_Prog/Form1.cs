@@ -107,7 +107,16 @@ namespace Graduation_Prog
                 p1 = new Pen(Color.Red, 2);
                 e.Graphics.DrawRectangle(p1, rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
             }
-            
+            Console.WriteLine();
+            Console.WriteLine("[Obstacle]");
+            foreach (var item in jf.lst_XYObstacle)
+            {
+                jXYObstacle rag = (jXYObstacle)item;
+                Console.WriteLine("(x1,y1) -> ({0},{1}) ~ (x2,y2) -> ({2},{3})", rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
+                Pen p1;
+                p1 = new Pen(Color.Blue, 2);
+                e.Graphics.DrawRectangle(p1, rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
+            }
         }
     }
 }
