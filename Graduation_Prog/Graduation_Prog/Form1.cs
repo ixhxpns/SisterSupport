@@ -105,7 +105,7 @@ namespace Graduation_Prog
                 Console.WriteLine("(x1,y1) -> ({0},{1}) ~ (x2,y2) -> ({2},{3})", rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
                 Pen p1;
                 p1 = new Pen(Color.Red, 2);
-                e.Graphics.DrawRectangle(p1, rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
+                e.Graphics.DrawRectangle(p1, rag.PointF.X * jf.smooth, rag.PointF.Y * jf.smooth, (float)rag.FS_Dist_x * jf.smooth, (float)rag.FS_Dist_y * jf.smooth);
             }
             Console.WriteLine();
             Console.WriteLine("[Obstacle]");
@@ -115,7 +115,7 @@ namespace Graduation_Prog
                 Console.WriteLine("(x1,y1) -> ({0},{1}) ~ (x2,y2) -> ({2},{3})", rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
                 Pen p1;
                 p1 = new Pen(Color.Blue, 2);
-                e.Graphics.DrawRectangle(p1, rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
+                e.Graphics.DrawRectangle(p1, rag.PointF.X * jf.smooth, rag.PointF.Y * jf.smooth, (float)rag.FS_Dist_x * jf.smooth, (float)rag.FS_Dist_y * jf.smooth);
             }
         }
     }

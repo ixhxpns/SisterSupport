@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 public class jFile
 {
-    public string path { get; set; } = @"C:\Users\JasonWang\.spyder-py3\input_example.txt"; //預設路徑
+    public string path { get; set; } = @"C:\CodeData\input_example.txt"; //預設路徑
 
     public List<jXYRange> lst_XYRange = new List<jXYRange>();
     public List<jXYPoint> lst_XYPoint = new List<jXYPoint>();
     public List<jXYObstacle> lst_XYObstacle = new List<jXYObstacle>();
+    public int smooth = 5;
 
 
     public List<string> filePara()
