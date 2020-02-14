@@ -80,24 +80,34 @@ namespace Graduation_Prog
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
+            //Graphics g = e.Graphics;
 
 
 
-            int x1 = pictureBox1.Location.X;
-            int x2 = pictureBox1.Location.X + pictureBox1.Size.Width / 2;
-            int x3 = pictureBox1.Location.X + pictureBox1.Size.Width;
-            int y1 = pictureBox1.Location.Y;
-            int y2 = pictureBox1.Location.Y + pictureBox1.Size.Height / 2;
-            int y3 = pictureBox1.Location.Y + pictureBox1.Size.Height;
+            //int x1 = pictureBox1.Location.X;
+            //int x2 = pictureBox1.Location.X + pictureBox1.Size.Width / 2;
+            //int x3 = pictureBox1.Location.X + pictureBox1.Size.Width;
+            //int y1 = pictureBox1.Location.Y;
+            //int y2 = pictureBox1.Location.Y + pictureBox1.Size.Height / 2;
+            //int y3 = pictureBox1.Location.Y + pictureBox1.Size.Height;
 
-            Pen p = new Pen(Color.Red, 1);
-            g.DrawLine(p, new Point(x1, y1), new Point(x3, y1));
-            g.DrawLine(p, new Point(x1, y2), new Point(x3, y2));
-            g.DrawLine(p, new Point(x1, y3), new Point(x3, y3));
-            g.DrawLine(p, new Point(x1, y1), new Point(x1, y3));
-            g.DrawLine(p, new Point(x2, y1), new Point(x2, y3));
-            g.DrawLine(p, new Point(x3, y1), new Point(x3, y3));
+            //Pen p = new Pen(Color.Red, 1);
+            //g.DrawLine(p, new Point(x1, y1), new Point(x3, y1));
+            //g.DrawLine(p, new Point(x1, y2), new Point(x3, y2));
+            //g.DrawLine(p, new Point(x1, y3), new Point(x3, y3));
+            //g.DrawLine(p, new Point(x1, y1), new Point(x1, y3));
+            //g.DrawLine(p, new Point(x2, y1), new Point(x2, y3));
+            //g.DrawLine(p, new Point(x3, y1), new Point(x3, y3));
+            Console.WriteLine("[Rang]");
+            foreach (var item in jf.lst_XYRange)
+            {
+                jXYRange rag = (jXYRange)item;
+                Console.WriteLine("(x1,y1) -> ({0},{1}) ~ (x2,y2) -> ({2},{3})", rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
+                Pen p1;
+                p1 = new Pen(Color.Red, 2);
+                e.Graphics.DrawRectangle(p1, rag.PointF.X, rag.PointF.Y, rag.PointS.X, rag.PointS.Y);
+            }
+            
         }
     }
 }
