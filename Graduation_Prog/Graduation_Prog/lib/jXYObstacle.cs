@@ -31,4 +31,26 @@ public class jXYObstacle
             return Math.Abs(PointF.Y - PointS.Y);
         }
     }
+    public int FS_rDist_x
+    {
+        get
+        {
+            if ((PointF == null) || (PointS == null))
+            {
+                return 0;
+            }
+            return Math.Abs(PointF.X + PointS.X);
+        }
+    }
+    public int FS_rDist_y
+    {
+        get
+        {
+            if ((PointF == null) || (PointS == null))
+            {
+                return 0;
+            }
+            return Math.Abs(PointF.Y + PointS.Y);
+        }
+    }
 }

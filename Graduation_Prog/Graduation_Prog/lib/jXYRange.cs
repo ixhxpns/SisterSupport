@@ -9,7 +9,7 @@ public class jXYRange
 {
     public Point PointF { set; get; }
     public Point PointS { set; get; }
-    public decimal FS_Dist_x
+    public int FS_Dist_x
     {
         get
         {
@@ -20,7 +20,7 @@ public class jXYRange
             return Math.Abs(PointF.X - PointS.X);
         }
     }
-    public decimal FS_Dist_y
+    public int FS_Dist_y
     {
         get
         {

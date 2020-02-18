@@ -37,7 +37,6 @@ public class jFile
                     {
                         string[] PointSplit = line.Split(new char[] { ')', '(' }, StringSplitOptions.RemoveEmptyEntries);
                         int _x0 = 0, _y0 = 0, _x1 = 0, _y1 = 0;
-
                         for (int i = 0; i < PointSplit.Length; i++)
                         {
                             if (i % 2 == 0)
@@ -89,7 +88,7 @@ public class jFile
                     _x = int.Parse(line.Split(new char[] { '(', ',', ')' }, StringSplitOptions.RemoveEmptyEntries)[0]);
                     _y = int.Parse(line.Split(new char[] { '(', ',', ')' }, StringSplitOptions.RemoveEmptyEntries)[1]);
                     jXYPoint jxyPoint = new jXYPoint();
-                    jxyPoint.PointO = new System.Drawing.Point(_x, _y);
+                    jxyPoint.PointO = new System.Drawing.Point(_x * smooth, _y * smooth);
                     lst_XYPoint.Add(jxyPoint);
                     break;
             }
