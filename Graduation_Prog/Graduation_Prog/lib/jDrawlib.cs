@@ -34,10 +34,12 @@ public class jDrawlib
             Pen p2;
             p2 = new Pen(Color.Green, 1);
             e.Graphics.DrawRectangle(p1, rag.PointF.X * jf.smooth, rag.PointF.Y * jf.smooth, (float)rag.FS_Dist_x * jf.smooth, (float)rag.FS_Dist_y * jf.smooth);
+            e.Graphics.DrawString(String.Format("({0},{1})", rag.PointF.X, rag.PointF.Y), new Font("Arial", 7), new SolidBrush(Color.Black), new Point(rag.PointF.X * jf.smooth, rag.PointF.Y * jf.smooth));
+            e.Graphics.DrawString(String.Format("({0},{1})", rag.PointS.X, rag.PointS.Y), new Font("Arial", 7), new SolidBrush(Color.Black), new Point(rag.PointS.X * jf.smooth, rag.PointS.Y * jf.smooth));
             e.Graphics.DrawLine(p2, new Point(rag.PointF.X * jf.smooth, 0), new Point(rag.PointF.X * jf.smooth, Max_Y));
             e.Graphics.DrawLine(p2, new Point(0, rag.PointF.Y * jf.smooth), new Point(Max_X, rag.PointF.Y * jf.smooth));
-            e.Graphics.DrawLine(p2, new Point(rag.FS_rDist_x * jf.smooth, 0), new Point(rag.FS_rDist_x * jf.smooth, Max_Y));
-            e.Graphics.DrawLine(p2, new Point(0, rag.FS_rDist_y * jf.smooth), new Point(Max_X, rag.FS_rDist_y * jf.smooth));
+            e.Graphics.DrawLine(p2, new Point(rag.PointS.X * jf.smooth, 0), new Point(rag.PointS.X * jf.smooth, Max_Y));
+            e.Graphics.DrawLine(p2, new Point(0, rag.PointS.Y * jf.smooth), new Point(Max_X, rag.PointS.Y* jf.smooth));
         }
         Console.WriteLine();
         Console.WriteLine("[Point]");
