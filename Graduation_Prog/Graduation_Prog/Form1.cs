@@ -13,16 +13,16 @@ namespace Graduation_Prog
 {
     public partial class Form1 : Form
     {
-
         jFile jf = new jFile();
         jDrawlib jd = new jDrawlib();
         public Form1()
         {
             InitializeComponent();
         }
-
+        //Form啟動時的事件
         private void Form1_Load(object sender, EventArgs e)
         {
+            //主要讀檔
             jf.filePara();
         }
 
@@ -49,14 +49,14 @@ namespace Graduation_Prog
                 Console.WriteLine("(x1,y1) -> ({0},{1})", rag.PointO.X, rag.PointO.Y);
             }
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
+        //UI  pictureBox1 在畫時的事件 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+            //主要畫圖區
             jd.baseDig(this.pictureBox1,jf,e);
         }
     }

@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\jXYAllPints.cs" />
     <Compile Include="lib\jDrawlib.cs" />
     <Compile Include="lib\jFile.cs" />
     <Compile Include="lib\jXYFreeSpace.cs" />

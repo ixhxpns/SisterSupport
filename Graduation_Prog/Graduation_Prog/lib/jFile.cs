@@ -10,12 +10,13 @@ public class jFile
 {
     public string path { get; set; } = @"C:\CodeData\input_example.txt"; //預設路徑
 
-    public List<jXYRange> lst_XYRange = new List<jXYRange>();
-    public List<jXYPoint> lst_XYPoint = new List<jXYPoint>();
-    public List<jXYObstacle> lst_XYObstacle = new List<jXYObstacle>();
-    public int smooth = 5;
+    public List<jXYRange> lst_XYRange = new List<jXYRange>();//(檔案)範圍
+    public List<jXYPoint> lst_XYPoint = new List<jXYPoint>();//(檔案)所有點List
+    public List<jXYObstacle> lst_XYObstacle = new List<jXYObstacle>();//(檔案)所有障礙物List
 
+    public int smooth = 5;//放大系數
 
+    //讀檔&塞值至LIST
     public List<string> filePara()
     {
         int counter = 0;
